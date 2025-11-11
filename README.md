@@ -1,77 +1,135 @@
-# Deployment and DevOps for MERN Applications
+Aquafarm Sensor Dashboard
 
-This assignment focuses on deploying a full MERN stack application to production, implementing CI/CD pipelines, and setting up monitoring for your application.
+A full-stack MERN (MongoDB, Express.js, React, Node.js) project that simulates and monitors aquaculture and smart farming sensor data. This system helps farmers and researchers track soil moisture,oxygen level, PH level, temperature, and fish count, promoting better irrigation management and sustainable aquaculture practices.
 
-## Assignment Overview
+ Essence of the Project
 
-You will:
-1. Prepare your MERN application for production deployment
-2. Deploy the backend to a cloud platform
-3. Deploy the frontend to a static hosting service
-4. Set up CI/CD pipelines with GitHub Actions
-5. Implement monitoring and maintenance strategies
+Water and agriculture management are central to sustainable food production.
+The Aquafarm Sensor Dashboard demonstrates how IoT-inspired sensor data can be simulated and visualized in real time to improve decisions in agriculture and aquaculture systems.
 
-## Getting Started
+Through this platform, users can:
 
-1. Accept the GitHub Classroom assignment invitation
-2. Clone your personal repository that was created by GitHub Classroom
-3. Follow the setup instructions in the `Week7-Assignment.md` file
-4. Use the provided templates and configuration files as a starting point
+📊 Visualize sensor trends such as soil moisture and temperature over time.
 
-## Files Included
+💧 Monitor water levels to prevent over- or under-watering.
 
-- `Week7-Assignment.md`: Detailed assignment instructions
-- `.github/workflows/`: GitHub Actions workflow templates
-- `deployment/`: Deployment configuration files and scripts
-- `.env.example`: Example environment variable templates
-- `monitoring/`: Monitoring configuration examples
+🐟 Simulate aquaculture data, including fish count and tank environment conditions.
 
-## Requirements
+🌍 Support sustainable farming through data-driven insights aligned with the UN SDGs.
 
-- A completed MERN stack application from previous weeks
-- Accounts on the following services:
-  - GitHub
-  - MongoDB Atlas
-  - Render, Railway, or Heroku (for backend)
-  - Vercel, Netlify, or GitHub Pages (for frontend)
-- Basic understanding of CI/CD concepts
+⚙️ Features
 
-## Deployment Platforms
+✅ Simulate Sensor Data — Randomly generate sensor readings for soil moisture, water level, and temperature.
+✅ Real-Time Dashboard — Display the latest data with dynamic React charts.
+✅ RESTful API — Backend endpoints to create, read, and simulate sensor data.
+✅ MongoDB Integration — Store and retrieve sensor readings for analysis.
+✅ Responsive UI — Built with Tailwind CSS for a clean, mobile-friendly interface.
 
-### Backend Deployment Options
-- **Render**: Easy to use, free tier available
-- **Railway**: Developer-friendly, generous free tier
-- **Heroku**: Well-established, extensive documentation
+🧰 Tech Stack
+Layer	Technology
+Frontend	React.js, Vite, Tailwind CSS
+Backend	Node.js, Express.js
+Database	MongoDB / MongoDB Atlas
+API Calls	Axios
+Deployment	Render (Backend), Netlify/Vercel (Frontend)
+📁 Project Structure
+Aquafarm project/
+│
+├─ BACKEND/
+│   ├─ controllers/
+│   │   └─ sensorController.js
+│   ├─ models/
+│   │   └─ sensorModel.js
+│   ├─ routes/
+│   │   └─ sensorRoutes.js
+│   ├─ server.js
+│   └─ .env
+│
+├─ FRONTEND/
+│   ├─ src/
+│   │   ├─ api/
+│   │   │   └─ sensorsApi.js
+│   │   ├─ components/
+│   │   ├─ App.jsx
+│   │   ├─ main.jsx
+│   │   └─ index.css
+│   └─ package.json
+│
+└─ README.md
 
-### Frontend Deployment Options
-- **Vercel**: Optimized for React apps, easy integration
-- **Netlify**: Great for static sites, good CI/CD
-- **GitHub Pages**: Free, integrated with GitHub
+🧑‍💻 Installation
+🖥️ Backend Setup
 
-## CI/CD Pipeline
+Navigate to the backend folder:
 
-The assignment includes templates for setting up GitHub Actions workflows:
-- `frontend-ci.yml`: Tests and builds the React application
-- `backend-ci.yml`: Tests the Express.js backend
-- `frontend-cd.yml`: Deploys the frontend to your chosen platform
-- `backend-cd.yml`: Deploys the backend to your chosen platform
+cd "Aquafarm project/BACKEND"
 
-## Submission
 
-Your work will be automatically submitted when you push to your GitHub Classroom repository. Make sure to:
+Install dependencies:
 
-1. Complete all deployment tasks
-2. Set up CI/CD pipelines with GitHub Actions
-3. Deploy both frontend and backend to production
-4. Document your deployment process in the README.md
-5. Include screenshots of your CI/CD pipeline in action
-6. Add URLs to your deployed applications
+npm install
 
-## Resources
 
-- [GitHub Actions Documentation](https://docs.github.com/en/actions)
-- [MongoDB Atlas Documentation](https://docs.atlas.mongodb.com/)
-- [Render Documentation](https://render.com/docs)
-- [Railway Documentation](https://docs.railway.app/)
-- [Vercel Documentation](https://vercel.com/docs)
-- [Netlify Documentation](https://docs.netlify.com/) 
+Create a .env file with the following values:
+
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/aquafarm
+JWT_SECRET=mysecretkey
+
+
+Start the backend:
+
+npm run dev
+
+
+The backend runs on http://localhost:5000
+
+💻 Frontend Setup
+
+Navigate to the frontend folder:
+
+cd "Aquafarm project/FRONTEND"
+
+
+Install dependencies:
+
+npm install
+
+
+Start the frontend:
+
+npm run dev
+
+
+The frontend runs on http://localhost:5174
+ (or next available port)
+
+🌐 API Endpoints
+Method	Endpoint	Description
+GET	/api/sensors	Fetch all sensor data
+POST	/api/sensors/simulate	Generate and save simulated sensor data
+🚀 Usage
+
+Start both frontend and backend servers.
+
+Open the dashboard in your browser.
+
+Click "Simulate Sensor Data" to generate readings.
+
+View the latest soil moisture, temperature, and water level data in the chart.
+
+Continue simulating to observe data trends and patterns.
+
+🌏 Relevance to the SDGs
+
+This project supports the following UN Sustainable Development Goals (SDGs):
+
+SDG 2 – Zero Hunger: Enhancing agricultural productivity through data-driven insights.
+
+SDG 6 – Clean Water and Sanitation: Encouraging efficient water management.
+
+SDG 12 – Responsible Consumption and Production: Reducing resource waste in aquaculture.
+
+📜 License
+
+This project is open-source and free to use for educational and research purposes.
