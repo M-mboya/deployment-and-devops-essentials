@@ -82,7 +82,8 @@ Start the backend:
 npm run dev
 
 
-The backend runs on http://localhost:5000
+The backend runs on http://localhost:5000 
+deployment link:https://dashboard.render.com/web/srv-d4fgvhkhg0os7390hmr0/deploys/dep-d4fgvi4hg0os7390hn7g
 
 💻 Frontend Setup
 
@@ -103,6 +104,8 @@ npm run dev
 
 The frontend runs on http://localhost:5174
  (or next available port)
+deployment link https://deployment-and-devops-essentials-pg267lzve.vercel.app/
+
 
 🌐 API Endpoints
 Method	Endpoint	Description
